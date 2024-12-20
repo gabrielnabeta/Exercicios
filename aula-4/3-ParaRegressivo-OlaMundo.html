@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Ola mundo Para regressivo</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Ola mundo para regressivo</h1>
+
+            <label for="Ola">Digite quantas vezes será dito "Ola mundo":</label><input type="text" id="txtOlaMundo">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var n = document.getElementById("txtOlaMundo").value;
+            var txtOlaMundo = parseInt(n);
+
+            for (var i = txtOlaMundo; i >= 1; i--) {
+                alert("Ola mundo");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

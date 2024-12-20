@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Maior Menor e média</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Maior menor e média</h1>
+
+            <label for="txtQtdNumeros">Digite a quantidade de números:</label><input type="number" id="txtQtdNumeros">
+
+            <label for="txtNumeros">Digite o número:</label><input type="number" id="txtNumeros">
+
+            <button onclick="botao_click()">Armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var numeros = [];
+
+        function botao_click() {
+            var txtQtd = document.getElementById("txtQtdNumeros");
+            var qtd = parseInt(txtQtd.value);
+
+            var txtNum = document.getElementById("txtNumeros");
+            if (numeros.length < qtd) {
+                var numero = parseInt(txtNum.value);
+
+                numeros.push(numero);
+
+                txtNum.value = "";
+                txtNum.focus();
+            }
+
+            if (numeros.length == qtd) {
+
+                var maiorNumero;
+                var menorNumero;
+                var medias;
+                var soma = 0;
+
+                for (var i = 0; i < numeros.length; i++) {
+                    var numero = numeros[i];
+
+                    if (maiorNumero == undefined || numero > maiorNumero) {
+                        maiorNumero = numero;
+                    }
+
+                    if (menorNumero == undefined || numero < menorNumero) {
+                        menorNumero = numero;
+                    }
+
+                    soma = soma + numeros[i];
+                }
+                medias = soma / numeros.length;
+
+                alert("O maior número é " + maiorNumero + ". O menor número é " + menorNumero + ". A média é " + medias);
+
+                numeros = [];
+
+                txtQtd.value = "";
+            }
+            
+            
+
+        }
+
+    </script>
+
+</body>
+</html>

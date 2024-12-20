@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Soma</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Soma</h1>
+
+            <p>Informe dois numeros abaixo para calcular a soma: </p>
+
+            <label for="txt1">Numero 1:</label>
+
+            <input type="number" id="number1">
+
+            <label for="txt1">Numero 2:</label>
+
+            <input type="number" id="number2">
+
+            <button onclick="botao_click()">Somar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var x = document.getElementById("number1").value;
+
+            var number1 = parseInt(x);
+
+            var y = document.getElementById("number2").value;
+
+            var number2 = parseInt(y);
+
+            var soma = number1 + number2;
+
+            var mensagem = "A soma é " + soma;
+
+            alert(mensagem);
+                            
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Soma Pares</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Soma Pares</h1>
+
+            <p>Calcular a soma dos números pares entre o número 1 e o número digitado</p>
+
+            <label for="num1">Número:</label><input type="number" id="txtNum1">
+
+            <button onclick="botao_click()">Somar ímpares</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var numeroUm = document.getElementById("txtNum1").value;
+            var soma = 0;
+
+            var txtNum1 = parseInt(numeroUm);
+            var soma = parseInt(soma);
+
+            for (var i = 1; i < txtNum1; i++) {     
+                if (i % 2 == 0) {
+                    soma = soma + i;
+                }
+            }
+
+            alert("Soma entre os números pares: " + soma);
+        }
+
+    </script>
+
+</body>
+</html>

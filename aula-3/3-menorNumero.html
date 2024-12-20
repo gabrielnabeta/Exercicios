@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Menor de três</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Menor de três</h1>
+
+            <label for="num1">Digite o primeiro número:</label><input type="number" id="txtNum1">
+
+            <label for="num2">Digite o segundo número:</label><input type="number" id="txtNum2">
+
+            <label for="num3">Digite o terceiro número:</label><input type="number" id="txtNum3">
+
+            <button onclick="botao_click()"></button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var num1 = document.getElementById("txtNum1").value;
+            var txtNum1 = parseFloat(num1);
+
+            var num2 = document.getElementById("txtNum2").value;
+            var txtNum2 = parseFloat(num2);
+
+            var num3 = document.getElementById("txtNum3").value;
+            var txtNum3 = parseFloat(num3);
+
+            if (num1 < num2 && num1 < num3) {
+                alert("Menor número: " + num1);
+            }
+            else if (num2 < num1 && num2 < 3) {
+                alert("Menor número: " + num2);
+            }
+            else {
+                alert("Menor número: " + num3);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

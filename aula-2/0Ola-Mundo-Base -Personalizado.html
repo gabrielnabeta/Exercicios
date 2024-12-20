@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Ola mundo personalizado</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Ola mundo personalizado</h1>
+
+            <p>Digite seu nome abaixo</p>
+
+            <label for="txt1">Nome:</label>
+            
+            <input type="text" id="CaixaDeTextoNome">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var nomeDigitado = document.getElementById("CaixaDeTextoNome").value;
+
+            var MensagemOlaMundo = "Ola mundo " + nomeDigitado;
+
+            alert(MensagemOlaMundo);
+
+        }
+
+    </script>
+
+</body>
+</html>

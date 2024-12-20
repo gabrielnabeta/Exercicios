@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Hora personalizada</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Hora personalizada</h1>
+
+
+            <label for="hora">Digite o horário:</label>
+            
+            <input type="number" id="txthora">
+
+            <button onclick="botao_click()">Insira</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var horaAtual = new date().getHours();
+
+            if (horaAtual >= 18) {
+                alert("Boa noite");
+            }
+            else if (horaAtual < 12) {
+                alert("Bom dia");
+            }
+            else {
+                alert("Boa tarde");
+            }  
+        }
+
+    </script>
+
+</body>
+</html>

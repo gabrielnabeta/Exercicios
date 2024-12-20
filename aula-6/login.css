@@ -1,0 +1,18 @@
+.box button{
+    width: 100%;
+}
+
+.box input[type="text"], 
+.box input[type="email"],
+.box input[type="password"]{
+    width:100%;
+}
+
+._senha {
+   float: right;
+   font-size: 12px;
+}
+
+.box {
+    width: 300px;
+}
